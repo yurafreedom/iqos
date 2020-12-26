@@ -1,0 +1,225 @@
+.page-header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	&__wrapper {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: 30px;
+		padding-left: 60px;
+		padding-right: 60px;
+		padding-bottom: 30px;
+	}
+	&__attention-block {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+	&__attention-icon {
+		display: block;
+		width: 42px;
+		height: 46px;
+		margin-right: 19px;
+	}
+	&__attention-title {
+		display: block;
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 1.2;
+		color: #000;
+	}
+	// &__toggle {
+	// 	outline: 0;
+	// 	position: relative;
+	// 	display: none;
+	// 	flex-shrink: 0;
+	// 	width: 30px;
+	// 	height: 30px;
+	// 	transition: all 0.3s ease-in-out;
+	// }
+	// &__toggle span {
+	// 	position: absolute;
+	// 	top: 14px;
+	// 	left: 3px;
+	// 	width: 24px;
+	// 	height: 3px;
+	// 	border-radius: 100px;
+	// 	background-color: #4140A3;
+	// 	transition: all 0.3s ease-in-out;
+	// 	&::before, &::after {
+	// 		content: '';
+	// 		position: absolute;
+	// 		top: 0;
+	// 		left: 0;
+	// 		width: 24px;
+	// 		height: 3px;
+	// 		border-radius: 100px;
+	// 		background-color: #4140A3;
+	// 		transition: all 0.3s ease-in-out;
+	// 	}
+	// 	&::before {
+	// 		top: -7px;
+	// 	}
+	// 	&::after {
+	// 		top: 7px;
+	// 	}
+	// }
+	// &__menu {
+	// 	position: fixed;
+	// 	top: 0;
+	// 	left: 0;
+	// 	width: 100%;
+	// 	height: 100vh;
+	// 	overflow-y: auto;
+	// 	transform: translateX(-100%);
+	// 	display: flex;
+	// 	flex-direction: column;
+	// 	justify-content: center;
+	// 	padding-left: 15px;
+	// 	padding-right: 15px;
+	// 	pointer-events: none;
+	// 	transition: all .3s ease-in-out;
+	// 	background-color: #5856D6;
+	// 	transition: transform .2s cubic-bezier(.645,.045,.355,1);
+	// 	z-index: 200;
+	// }
+	// &__menu > * {
+	// 	flex-shrink: 0;
+	// }
+	// &__menu.active {
+	// 	opacity: 1;
+	// 	pointer-events: all;
+	// 	transform: translateX(0);
+	// }
+	// &__menu-nav ul {
+	// 	list-style-type: none;
+	// 	margin: 0;
+	// 	padding: 0;
+	// 	font-family: 'SF UI Display', sans-serif;
+	// 	font-size: 18px;
+	// 	font-weight: 700;
+	// 	line-height: 1.2;
+	// 	text-align: center;
+	// 	letter-spacing: 0.75px;
+	// 	text-transform: uppercase;
+	// }
+	// &__menu-nav ul li:not(:last-child) {
+	// 	margin-bottom: 55px;
+	// }
+	// &__menu-nav ul li a {
+	// 	color: #fff;
+	// 	transition: all 0.3s ease-in-out;
+	// 	&:hover {
+	// 		text-decoration: none;
+	// 	}
+	// }
+	// &__menu &__toggle {
+	// 	position: absolute;
+	// 	top: 45px;
+	// 	right: 20px;
+	// 	width: 20px;
+	// 	height: 20px;
+	// 	z-index: 10;
+	// }
+	// &__menu &__toggle span {
+	// 	top: 13px;
+	// 	left: -1px;
+	// 	width: 0;
+	// 	background-color: #fff;
+	// 	&::before, &::after {
+	// 		width: 24px;
+	// 		height: 3px;
+	// 		left: -1px;
+	// 		border-radius: 90px;
+	// 		background-color: #fff;
+	// 	}
+	// 	&::before {
+	// 		top: -4px;
+	// 		transform: rotate(45deg);
+	// 	}
+	// 	&::after {
+	// 		top: -4px;
+	// 		transform: rotate(-45deg);
+	// 	}
+	// }
+	&__inner {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		width: 100%;
+		max-width: 658px;
+	}
+	&__nav {
+		position: relative;
+		display: block;
+		width: 100%;
+	}
+	&__nav ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		max-width: 400px;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 1.2;
+		text-transform: uppercase;
+	}
+	&__nav ul li a {
+		color: #fff;
+		transition: all 0.3s ease-in-out;
+		&:hover {
+			text-decoration: none;
+			color: rgba(0, 0, 0, 0.5);
+		}
+	}
+	&__nav ul li.active a {
+		color: rgba(0, 0, 0, 0.5);
+	}
+	// &__nav ul li:not(:last-child) {
+	// 	margin-right: 70px;
+	// }
+
+}
+
+@include for-size(mobile) {
+	.page-header {
+		&__inner {
+			display: none;
+		}
+		&__toggle {
+			display: block;
+		}
+		&__wrapper {
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+		&__logo {
+			font-size: 16px;
+		}
+	}
+}
+
+@include for-size(tablet) {
+	.page-header__nav ul {
+		font-size: 16px;
+		max-width: 300px;
+	}
+	.page-header__nav ul li:not(:last-child) {
+		margin-right: 30px;
+	}
+	.page-header__nav {
+		margin-right: 30px;
+	}
+	.page-header__inner {
+		max-width: 520px;
+	}
+}

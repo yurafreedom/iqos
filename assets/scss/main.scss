@@ -1,0 +1,42 @@
+
+// GLOBAL STYLES
+@import "global/custom-variables";
+
+@import "global/normalize";
+@import "global/mixins";
+@import "global/forms";
+@import "global/tabs";
+@import "global/buttons";
+@import "global/fonts";
+
+// PLUGINS STYLE
+@import "plugins/fullpage";
+
+// BLOCKS STYLE
+@import "blocks/popup-block";
+@import "blocks/main-block";
+@import "blocks/fullpage-block";
+@import "blocks/iqos-block";
+@import "blocks/lil-block";
+@import "blocks/page-header";
+@import "blocks/page-footer";
+
+body {
+	position: relative;
+	background-color: #F4F8F9;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	
+	font-family: $font-family;
+	color: #000;
+	font-weight: 400;
+	line-height: 1.2;
+	font-size: 16px;
+	min-width: 320px;
+	margin: 0;
+}
+
+
+
+

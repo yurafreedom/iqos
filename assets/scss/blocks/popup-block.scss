@@ -1,0 +1,243 @@
+.popup-block {
+	position: fixed;
+	top: 0;
+	left: 0;
+	
+	z-index: 600; 
+	
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	color: #000;
+	
+	display: none;
+	
+	&__overlay {
+		position: relative;
+		display: block;
+		width: 100%;
+		min-height: 100%;
+		overflow: hidden;
+		
+		background-color: rgba(0,0,0,0.8);
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		padding-top: 24px;
+		padding-bottom: 24px;
+	}
+	&__popup {
+		position: relative;
+		width: 100%;
+		max-width: 1268px;
+		border-radius: 4px;
+		background-color: #fff;
+		box-shadow: 0 0 84px rgba(150, 122, 95, 0.19);
+		overflow: hidden;
+	}
+	&__close {
+		position: absolute;
+		top: 28px;
+		right: 36px;
+		display: block;
+		width: 42px;
+		height: 42px;
+		border-radius: 12px;
+		background-color: #F4F8F9;
+		background-image: url('../img/close.svg');
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 12px 12px;
+		cursor: pointer;
+		transition: all 0.3s ease-in;
+		z-index: 10;
+	}
+	&__email-block {
+		position: relative;
+		display: block;
+		padding-top: 65px;
+		padding-left: 30px;
+		padding-right: 30px;
+		padding-bottom: 65px;
+	}
+	&__email-form {
+		position: relative;
+		display: block;
+	}
+	&__email-title {
+		display: block;
+		text-align: center;
+		font-family: 'PlayfairDisplay', sans-serif;
+		font-size: 38px;
+		line-height: 1.3;
+		font-weight: 400;
+		color: #000;
+		margin-bottom: 60px;
+	}
+	&__input-wrapper {
+		position: relative;
+		display: block;
+		margin-bottom: 60px;
+	}
+	&__email-input {
+		display: block;
+		width: 100%;
+		max-width: 1138px;
+		margin: 0 auto;
+		background-color: #F5F3F3;
+		border-radius: 2px;
+		font-family: 'Avenir', sans-serif;
+		font-weight: 350;
+		font-size: 28px;
+		line-height: 1.3;
+		color: #000;
+		&::placeholder {
+			font-family: 'Avenir', sans-serif;
+			font-weight: 350;
+			font-size: 28px;
+			line-height: 1.3;
+			color: #000;
+		}
+	}
+	&__email-input.disabled::placeholder {
+		font-size: 0;
+	}
+	.btn--sign {
+		margin: 0 auto;
+	}
+	&__thanks-block {
+		position: relative;
+		display: block;
+		padding-top: 130px;
+		padding-left: 30px;
+		padding-right: 30px;
+		padding-bottom: 125px;
+	}
+	&__thanks-title {
+		display: block;
+		font-family: 'PlayfairDisplay', sans-serif;
+		font-size: 58px;
+		line-height: 1.3;
+		font-weight: 700;
+		text-align: center;
+		color: #535E70;
+	}
+	&__thanks-description {
+		display: block;
+		font-size: 38px;
+		line-height: 1.3;
+		text-align: center;
+		font-family: 'PlayfairDisplay', sans-serif;
+		font-weight: 400;
+		color: #000;
+		margin-bottom: 60px;
+	}
+	&__thanks-text {
+		display: block;
+		text-align: center;
+		font-family: 'Avenir', sans-serif;
+		font-size: 28px;
+		line-height: 1.3;
+		font-weight: 400;
+		p {
+			margin: 0;
+		}
+		p a {
+			color: #535E70;
+			text-decoration: underline;
+			transition: all 0.3s ease-in-out;
+		}
+	}
+}
+
+@include for-size(mobile) {
+	.popup-block {
+		-webkit-overflow-scrolling: touch !important;
+		&__overlay {
+			justify-content: center;
+			padding-top: 10px;
+			padding-left: 15px;
+			padding-right: 15px;
+			padding-bottom: 10px;
+		}
+		&__popup {
+			width: 100%;
+			height: auto;
+		}
+		&__thanks-block {
+			padding-top: 51px;
+			padding-bottom: 63px;
+		}
+		&__thanks-title {
+			font-size: 28px;
+		}
+		&__thanks-description {
+			font-size: 16px;
+		}
+		&__thanks-text {
+			font-size: 12px;
+		}
+		&__email-block {
+			padding-top: 36px;
+			padding-bottom: 36px;
+		}
+		&__email-block, &__thanks-block {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		&__email-title {
+			font-size: 18px;
+			margin-bottom: 24px;
+		}
+		&__email-input {
+			font-size: 12px;
+			height: 47px;
+			&::placeholder {
+				font-size: 12px;
+			}
+		}
+		&__input-wrapper {
+			margin-bottom: 24px;
+		}
+		.btn--sign {
+			max-width: 161px;
+			height: 47px;
+			font-size: 14px;
+		}
+	}
+}
+
+@media screen and (min-width: 360px) and (max-width: 767px) {
+	.popup-block {
+
+	}
+}
+
+@include for-size(tablet) {
+	.popup-block {
+		&__popup {
+			max-width: 650px;
+		}
+		&__thanks-title {
+			font-size: 45px;
+		}
+		&__thanks-description {
+			font-size: 30px;
+		}
+		&__thanks-text {
+			font-size: 20px;
+		}
+	}
+}
+
+
+
+
+
+

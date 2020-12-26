@@ -1,0 +1,60 @@
+#fp-nav.left {
+	left: 60px;
+}
+
+#fp-nav {
+	top: auto;
+	bottom: 110px;
+}
+
+#fp-nav ul {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+#fp-nav ul li {
+	margin: 0;
+	width: 15px;
+	height: 15px;
+}
+
+#fp-nav ul li:not(:last-child) {
+	margin-right: 105px;
+}
+
+#fp-nav ul li a {
+	position: relative;
+	display: block;
+	width: 15px;
+	height: 15px;
+}
+
+#fp-nav ul li a span {
+	display: block;
+	width: 15px;
+	height: 15px;
+	left: 0;
+	top: auto;
+	margin: 0 !important;
+	border: 1px solid #000;
+	background-color: #fff;
+}
+
+#fp-nav ul li a.active span {
+	width: 15px;
+	height: 15px;
+	background-color: #000;
+}
+
+#fp-nav ul li a.active::after {
+	content: '';
+	position: absolute;
+	top: 4px;
+	left: 41px;
+	width: 55px;
+	height: 10px;
+	background-image: url('../img/arrow.svg');
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+}
