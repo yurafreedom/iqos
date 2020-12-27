@@ -13,17 +13,21 @@
 @import "plugins/fullpage";
 
 // BLOCKS STYLE
+@import "blocks/page-header";
 @import "blocks/popup-block";
 @import "blocks/main-block";
 @import "blocks/fullpage-block";
 @import "blocks/iqos-block";
 @import "blocks/lil-block";
-@import "blocks/page-header";
+@import "blocks/advantages-block";
+@import "blocks/research-block";
+@import "blocks/iqos-style-block";
+@import "blocks/iqos-design-block";
 @import "blocks/page-footer";
 
 body {
 	position: relative;
-	background-color: #F4F8F9;
+	background-color: #fff;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

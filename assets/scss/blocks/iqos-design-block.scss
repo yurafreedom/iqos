@@ -1,0 +1,159 @@
+.iqos-design-block {
+	min-height: 100vh;
+	&__wrapper {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		min-height: 100vh;
+	}
+	&__photo-block {
+		position: absolute;
+		top: 38px;
+		left: 0;
+		display: block;
+		width: 1000px;
+		height: 1000px;
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__content-block {
+		position: relative;
+		display: block;
+		flex-shrink: 0;
+	}
+	&__content-text {
+		display: block;
+		width: 100%;
+		max-width: 560px;
+		font-size: 40px;
+		line-height: 1.2;
+		font-weight: 300;
+		color: #000;
+		p {
+			margin: 0;
+		}
+	}
+	&__inner-block {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+	}
+	&__list-block {
+		position: relative;
+		display: block;
+		width: 100%;
+		flex-shrink: 0;
+		max-width: 570px;
+	}
+	&__card-block {
+		position: relative;
+		display: block;
+		width: 100%;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 121px;
+			right: 0;
+			width: 703px;
+			height: 1px;
+			background-color: #000;
+		}
+	}
+	&__card-title {
+		display: block;
+		font-size: 40px;
+		line-height: 1.2;
+		font-weight: 400;
+		color: #000;
+		margin-bottom: 50px;
+	}
+	&__card-text {
+		display: block;
+		font-size: 20px;
+		line-height: 1.3;
+		font-weight: 300;
+		color: #000;
+		p {
+			margin: 0;
+		}
+	}
+	&__figure-block {
+		position: relative;
+		display: block;
+		top: 0;
+		left: -130px;
+	}
+	&__figure {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 90px;
+		height: 90px;
+		border-radius: 50%;
+		border: 1px solid #fff;
+		&:not(:last-child) {
+			margin-bottom: 111px;
+		}
+		span.circle {
+			position: absolute;
+			top: 17px;
+			left: 17px;
+			display: none;
+			width: 38px;
+			height: 38px;
+			padding: 26px;
+			border-radius: 50%;
+			border: 1px solid #fff;
+		}
+		span.circle.active {
+			display: block;
+		}
+		span.point {
+			display: block;
+			flex-shrink: 0;
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background-color: #fff;
+		}
+	}
+	&__card-risk-block {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		max-width: 203px;
+		margin-top: 50px;
+		margin-bottom: 25px;
+		padding-top: 12px;
+		padding-bottom: 13px;
+		border: 1px solid #000;
+		font-size: 13px;
+		font-weight: 300;
+		line-height: 1.2;
+		text-transform: uppercase;
+		p {
+			margin: 0;
+		}
+	}
+	&__card-description {
+		display: block;
+		font-size: 13px;
+		font-weight: 400;
+		line-height: 1.2;
+		color: rgba(0,0,0,0.7);
+	}
+	#advantages-tab-2 {
+		margin-top: 200px;
+	}
+	#advantages-tab-3 {
+		margin-top: 400px;
+	}
+}

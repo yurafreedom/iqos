@@ -1,0 +1,49 @@
+.iqos-style-block {
+	&__wrapper {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		padding-left: 245px;
+	}
+	&__title {
+		display: block;
+		font-size: 100px;
+		font-weight: 300;
+		line-height: 1.2;
+		text-transform: uppercase;
+		color: #000;
+		margin-bottom: 46px;
+	}
+	&__text {
+		display: block;
+		width: 100%;
+		max-width: 667px;
+		font-size: 50px;
+		font-weight: 300;
+		line-height: 1.2;
+		color: #000;
+	}
+	&__photo-block {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+	&__photo {
+		display: block;
+		width: 701px;
+		height: 1047px;
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__logo-block {
+		position: absolute;
+		top: 175px;
+		right: 0;
+	}
+}

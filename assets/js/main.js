@@ -133,9 +133,10 @@ $('#fullpage_iqos_block').fullpage({
 	easingcss3: 'ease-in-out',
 	normalScrollElements: '#header_menu, .page-footer__help-button',
 	fitToSection: false,
-	navigation: true,
+	navigation: false,
 	scrollOverflowOptions: { click: false },
-	anchors: ['slide-1', 'slide-2', 'slide-3', 'slide-4', 'slide-5', 'services', 'projects', 'about', 'footer'],
+	slidesNavigation: true,
+	anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage'],
 	navigationPosition: 'left',
 	afterRender: function() {
 		var currentIndex = $('#fullpage_iqos_block .fp-section.active').index();
@@ -230,10 +231,6 @@ $('[data-toggle="menu-scroll"]').on('click', function(e) {
 	
 });
 
-if('#fp-nav ul li a').hasClass('active', function() {
-	$('#fp-nav ul li').addClass('active');
-});
-
-// $('#fp-nav ul li a.active').on('click', function() {
-// 	$('#fp-nav ul li').addClass('active');
-// });
+$('.main-block__iqos-photo-block').on('click', function() {
+	$('.section').removeClass('iqos-disabled');
+})
