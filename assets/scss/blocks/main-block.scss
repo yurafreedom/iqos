@@ -7,6 +7,11 @@ body.black .btn--order {
 	color: #000;
 }
 
+.page-block__wrapper {
+	position: relative;
+	display: block;
+}
+
 .main-block {
 	background-color: #fff;
 	&__wrapper {
